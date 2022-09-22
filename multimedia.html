@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Multimedia - HTML 5 </title>
+		
+	</head>
+	<body>
+		<h2>Belajar multimedia - HTML 5</h2>
+		<p>
+		<button onclick= "playVid()" type= "button"> Play Vidio</button>
+		<button onclick= "pauseVid()" type= "button"> Pause Vidio</button>
+		<button onclick = "durationvid()" type= "button"> Duration Vidio</button>
+		<button onclick = "controller()" type= "button"> controller</button>
+		
+		</p>
+		<video width= "560" id= "myVideo">
+			<source src ="movie/movie.mp4" type="video/mp4"> 
+			browser not support........
+		</video>
+	</body>
+	<script>
+	var vid = document.getElementById("myVideo");
+
+function playVid() {
+    vid.play();
+	vid.loop=true;
+	vid.volume=true;
+	vid.muted () ;
+}
+
+function pauseVid() {
+    vid.pause();
+}
+function durationvid() {
+    alert(vid.duration);
+}
+function controller() {
+   alert("Controller: " + vid.controller);
+}
+
+</script>
+</html>
